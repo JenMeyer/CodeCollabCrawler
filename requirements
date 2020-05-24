@@ -1,0 +1,6 @@
+requests
+tqdm
+pymongo
+pprint
+ast
+numpy
