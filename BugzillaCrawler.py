@@ -229,7 +229,7 @@ class BugzillaCrawler:
             #enters comments into db or file if there are any comments for the id
             if commentsDict:
                 if self.mongoDB:
-                    self.mongoDB["comments"].insert_many(commentsDict)
+                    self.mongoDB["Comments"].insert_many(commentsDict)
                 if self.folder:
                     with open(self.folderpath + "Bugzilla_Comments.txt", 'a') as f:
                         f.write(str(commentsDict) + "\n")
