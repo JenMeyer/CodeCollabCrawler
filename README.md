@@ -57,7 +57,7 @@ This Crawler is split into two files:
 The Output can be saved as files in a directory or MongoDB entries. They are also possible at the same time.
 The result of crawling Bug Data and Bug-IDs is:
 * as files
-  * __allDevs.csv___: a list of all developers and their number of commits as well as if they're active accounts.
+  * __allDevs.csv__: a list of all developers and their number of commits as well as if they're active accounts.
   * __noCommitsUser.csv__: a list of all users without Commits
   * 10 __'id?.csv'__ with the ? being 0-9: all Commits and their data are saved into the file corresponding to the 
     last digit of the user-id. Their ownership can also be determined through that user-id.
