@@ -266,7 +266,7 @@ class BugzillaCrawler:
         pool.close()
         pool.join()
 
-    def createFolder(self, foldername: str):
+    def createFolder(self, foldername: str) -> None:
         """
         Creates a directory if it doesn't exist already
 
