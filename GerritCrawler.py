@@ -15,7 +15,7 @@ class GerritCrawler:
     """
 
     def __init__(self, startPointIncrease: int, url: str, beforeDate: str = None, afterDate: str = None,
-                 foldername: str = None, separator: str = ',', mongoDB: Database = None):
+                 foldername: str = None, separator: str = ',', mongoDB: Database = None) -> None:
         """
         Initializes the Crawler.
 
@@ -72,7 +72,7 @@ class GerritCrawler:
                 "commitsCollections": ["id{}.csv".format(x) for x in range(10)],
             }
 
-    def enterOneUserCommits(self, user: str):
+    def enterOneUserCommits(self, user: str) -> None:
         """
         Starts the request process and continues it as long as there are still more commits to be crawled.
         It saves the developers with their commit counter into one file/collection, the commenters into another
@@ -149,7 +149,7 @@ class GerritCrawler:
             with open(self.folderpath + self.folderDic["devs"], 'a') as f:
                 f.write(str(userString) + "\n")
 
-    def enterManyUsersCommits(self, userList):
+    def enterManyUsersCommits(self, userList) -> None:
         """
         Accepts a List of Users to crawl commits for and executes it for each user.
 
@@ -159,7 +159,7 @@ class GerritCrawler:
         for user in userList:
             self.enterOneUserCommits(user)
 
-    def createFolder(self, foldername: str):
+    def createFolder(self, foldername: str) -> None:
         """
         Creates a directory if it doesn't exist already
 
